@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+	compile('com.what3words:w3w-java-wrapper:3.0.1')
+	
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
