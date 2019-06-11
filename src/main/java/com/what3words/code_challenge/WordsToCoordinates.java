@@ -13,7 +13,7 @@ public class WordsToCoordinates {
 
 
         if (coordinates.isSuccessful()) { // the request was successful
-            System.out.println("" + words + " coordinates: " + coordinates);
+            System.out.println("\n" + words + " coordinates: " + coordinates);
 
         } else { // the request was not successful
             APIResponse.What3WordsError error = coordinates.getError();
