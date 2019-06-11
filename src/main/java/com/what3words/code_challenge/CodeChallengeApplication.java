@@ -5,15 +5,19 @@ import com.what3words.javawrapper.response.ConvertToCoordinates;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
+import java.io.FileWriter;
+import java.io.IOException;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 
 @SpringBootApplication
@@ -27,7 +31,8 @@ public class CodeChallengeApplication {
 		System.out.println("\n\n\n\n");
 
 
-		// ***** READ INPUTS FROM FILES ***** //
+		// *************** READ INPUTS FROM FILES *************** //
+
 		String APIkey = "";
 		List<String> What3Words = new ArrayList<>();
 
@@ -45,7 +50,7 @@ public class CodeChallengeApplication {
 		try (Stream<String> stream = Files.lines(Paths.get("./inputs/w3w_addresses.txt"))) {
 
 			// add each line to the list as a string
-			stream.forEach(s -> What3Words.add(s));
+			stream.forEach(w -> What3Words.add(w));
 			//System.out.println("What3Words: " + What3Words);
 		}
 		catch (IOException e) {
@@ -53,7 +58,7 @@ public class CodeChallengeApplication {
 		}
 
 
-		// ***** GET COORDINATES ***** //
+		// *************** GET COORDINATES *************** //
 
 		// set the API key for the requests
 		What3WordsV3 api = new What3WordsV3(APIkey);
@@ -62,14 +67,35 @@ public class CodeChallengeApplication {
 		WordsToCoordinates wordsToCoordinates = new WordsToCoordinates();
 
 		// List to store the coordinates and information for each what3words
-		List<ConvertToCoordinates> coordinates = new ArrayList<>();
+		Map<String, ConvertToCoordinates> coordinates = new HashMap<>();
 
-		What3Words.forEach( word -> {
-			coordinates.add(wordsToCoordinates.getCoordinates(api, word));
 
+		What3Words.forEach( words -> coordinates.put(words, wordsToCoordinates.getCoordinates(api, words)) );
+
+
+
+
+		// *************** WRITE TO JSON FILE *************** //
+
+		JSONArray coordinatesList = new JSONArray();
+
+
+		coordinates.forEach((words, info) -> {
+
+			JSONObject object = new JSONObject();
+			object.put(words, info);
+			coordinatesList.add(object);
 		});
 
-		//System.out.println(coordinates);
-	}
+		//Write JSON file
+		try (FileWriter file = new FileWriter("./outputs/coordinates.json")) {
 
+			file.write(coordinatesList.toJSONString());
+			file.flush();
+
+		} catch (IOException e) {
+			System.out.println(e + " when writing the coordinates in JSON file.");
+		}
+
+	}
 }
