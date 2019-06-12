@@ -30,6 +30,7 @@ public class CodeChallengeApplication {
 		System.out.println("\n\n\n");
 
 
+
 		// *************** READ INPUTS FROM FILES *************** //
 
 		String APIkey = "";
@@ -73,7 +74,7 @@ public class CodeChallengeApplication {
 			JSONObject object = new JSONObject();
 			object.put(words, wordsToCoordinates.getCoordinates(api, words));
 			coordinates.add(object);
-		} );
+		});
 
 
 
