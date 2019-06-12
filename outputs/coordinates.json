@@ -1,61 +1,71 @@
-[{"silk.slap.soils":{
-  "country": "GB",
-  "square": {
-    "southwest": {
-      "lng": -0.260147,
-      "lat": 51.33646
-    },
-    "northeast": {
-      "lng": -0.260104,
-      "lat": 51.336487
+[
+  {
+    "silk.slap.soils": {
+      "country": "GB",
+      "square": {
+        "southwest": {
+          "lng": -0.260147,
+          "lat": 51.33646
+        },
+        "northeast": {
+          "lng": -0.260104,
+          "lat": 51.336487
+        }
+      },
+      "nearestPlace": "Epsom, Surrey",
+      "coordinates": {
+        "lng": -0.260125,
+        "lat": 51.336473
+      },
+      "words": "silk.slap.soils",
+      "language": "en",
+      "map": "https://w3w.co/silk.slap.soils"
     }
   },
-  "nearestPlace": "Epsom, Surrey",
-  "coordinates": {
-    "lng": -0.260125,
-    "lat": 51.336473
-  },
-  "words": "silk.slap.soils",
-  "language": "en",
-  "map": "https://w3w.co/silk.slap.soils"
-}},{"zealous.range.garage":{
-  "country": "GB",
-  "square": {
-    "southwest": {
-      "lng": -7.320368,
-      "lat": 54.997547
-    },
-    "northeast": {
-      "lng": -7.320321,
-      "lat": 54.997574
+  {
+    "zealous.range.garage": {
+      "country": "GB",
+      "square": {
+        "southwest": {
+          "lng": -7.320368,
+          "lat": 54.997547
+        },
+        "northeast": {
+          "lng": -7.320321,
+          "lat": 54.997574
+        }
+      },
+      "nearestPlace": "Derry",
+      "coordinates": {
+        "lng": -7.320345,
+        "lat": 54.997561
+      },
+      "words": "zealous.range.garage",
+      "language": "en",
+      "map": "https://w3w.co/zealous.range.garage"
     }
   },
-  "nearestPlace": "Derry",
-  "coordinates": {
-    "lng": -7.320345,
-    "lat": 54.997561
-  },
-  "words": "zealous.range.garage",
-  "language": "en",
-  "map": "https://w3w.co/zealous.range.garage"
-}},{"slurs.this.shark":{
-  "country": "GB",
-  "square": {
-    "southwest": {
-      "lng": -0.127645,
-      "lat": 51.503342
-    },
-    "northeast": {
-      "lng": -0.127601,
-      "lat": 51.503369
+  {
+    "slurs.this.shark": {
+      "country": "GB",
+      "square": {
+        "southwest": {
+          "lng": -0.127645,
+          "lat": 51.503342
+        },
+        "northeast": {
+          "lng": -0.127601,
+          "lat": 51.503369
+        }
+      },
+      "nearestPlace": "London",
+      "coordinates": {
+        "lng": -0.127623,
+        "lat": 51.503355
+      },
+      "words": "slurs.this.shark",
+      "language": "en",
+      "map": "https://w3w.co/slurs.this.shark"
     }
-  },
-  "nearestPlace": "London",
-  "coordinates": {
-    "lng": -0.127623,
-    "lat": 51.503355
-  },
-  "words": "slurs.this.shark",
-  "language": "en",
-  "map": "https://w3w.co/slurs.this.shark"
-}}]
+  }
+]
