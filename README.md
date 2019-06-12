@@ -1,7 +1,7 @@
 
 # Java API Programming Challenge
 
-​Small ​Spring Boot ​RESTful Service in Java using the [What3Words](​https://www.what3words.com) API in order to retrieve information about a given set of What3Words.
+​Small ​Spring Boot ​RESTful Service in Java using the [What3Words](https://www.what3words.com/) API in order to retrieve information about a given set of What3Words.
 It uses the [Java Wrapper](https://docs.what3words.com/wrapper/java/) suggested on the documentation.
 
 
