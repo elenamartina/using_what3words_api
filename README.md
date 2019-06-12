@@ -7,11 +7,11 @@ It uses the [Java Wrapper](https://docs.what3words.com/wrapper/java/) suggested 
 
 ## Functionalities
 
-* The program reads the inputs from the two separate files in the `inputs` folder, containing the API key and the What3Words addresses, respectively.
+* The program reads the inputs from the two files in the `inputs` folder, containing the API key and the What3Words addresses, respectively.
 
 * The API key is used to make GET requests to the What3Words API in order to retrieve the information corresponding to the given What3Words addresses.
 
-* The information obtained from the requests are written to a JSON file
+* The information obtained from the requests are written to a JSON file, `coordinates.json`
 
 
 #### Project Structure
